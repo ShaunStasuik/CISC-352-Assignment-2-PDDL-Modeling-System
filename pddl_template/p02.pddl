@@ -8,41 +8,22 @@
   )
 
   (:init
-    ; Hero location and carrying status
     (hero-at loc-2-2)
     (hand-free)
 
-    ; Location <> Corridor Connections (both directions)
-    (connected loc-2-1 loc-2-2 c2122)
-    (connected loc-2-2 loc-2-1 c2122)
+    ; Location <> Corridor Connections
+    (connected loc-2-1 loc-2-2 c2122) (connected loc-2-2 loc-2-1 c2122)
+    (connected loc-1-2 loc-2-2 c1222) (connected loc-2-2 loc-1-2 c1222)
+    (connected loc-2-2 loc-3-2 c2232) (connected loc-3-2 loc-2-2 c2232)
+    (connected loc-3-2 loc-4-2 c3242) (connected loc-4-2 loc-3-2 c3242)
+    (connected loc-2-2 loc-2-3 c2223) (connected loc-2-3 loc-2-2 c2223)
 
-    (connected loc-1-2 loc-2-2 c1222)
-    (connected loc-2-2 loc-1-2 c1222)
-
-    (connected loc-2-2 loc-3-2 c2232)
-    (connected loc-3-2 loc-2-2 c2232)
-
-    (connected loc-3-2 loc-4-2 c3242)
-    (connected loc-4-2 loc-3-2 c3242)
-
-    (connected loc-2-2 loc-2-3 c2223)
-    (connected loc-2-3 loc-2-2 c2223)
-
-    ; Corridor entrances (required for unlock)
-    (entrance c2122 loc-2-1)
-    (entrance c2122 loc-2-2)
-
-    (entrance c1222 loc-1-2)
-    (entrance c1222 loc-2-2)
-
-    (entrance c2232 loc-2-2)
-    (entrance c2232 loc-3-2)
-
-    (entrance c3242 loc-3-2)
-    (entrance c3242 loc-4-2)
-
-    (entrance c2223 loc-2-2)
-    (entrance c2223 loc-2-3)
+    ; Entrances to corridors
+    (entrance c2122 loc-2-1) (entrance c2122 loc-2-2)
+    (entrance c1222 loc-1-2) (entrance c1222 loc-2-2)
+    (entrance c2232 loc-2-2) (entrance c2232 loc-3-2)
+    (entrance c3242 loc-3-2) (entrance c3242 loc-4-2)
+    (entrance c2223 loc-2-2) (entrance c2223 loc-2-3)
 
     ; Key locations
     (key-at key1 loc-2-1)
@@ -56,9 +37,10 @@
     (locked c2223 green)
     (locked c3242 rainbow)
 
-    ; risky corridors: none
+    ; Risky corridors, red locks collapse the corridor after use
+    ; none in p2
 
-    ; Key colours
+    ; Key Colours
     (key-colour key1 green)
     (key-colour key2 rainbow)
     (key-colour key3 purple)
@@ -71,9 +53,5 @@
     (two-use key4)
   )
 
-  (:goal
-    (and
-      (hero-at loc-4-2)
-    )
-  )
+  (:goal (and (hero-at loc-4-2)))
 )
