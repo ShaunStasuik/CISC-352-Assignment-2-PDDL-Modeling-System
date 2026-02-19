@@ -1,0 +1,27 @@
+CISC 352 – Assignment 2
+Group Number: 77
+
+Student Information:
+
+1. Shaun Stasuik  
+   Student Number: 20389739  
+   NetID: 22QH17  
+
+2. Daryan Lindsay  
+   Student Number: 20383488  
+   NetID: 22GMV4  
+
+3. Tirthkumar Patel  
+   Student Number: 20442158  
+   NetID: 23DWN3  
+
+
+Contribution Description:
+
+Shaun Stasuik and Tirthkumar Patel worked together on the domain.pddl file.
+
+Tirthkumar Patel implemented p01.pddl and p02.pddl.
+
+Shaun Stasuik implemented p03.pddl.
+
+Daryan Lindsay implemented p04.pddl.
